@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools >= 61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["rlzoo_sim"]
+
+[project]
+name = "rlzoo-sim"
+version = "0.1.0"
+description = "A clone of RLGym for use with RocketSim and PettingZoo in reinforcement learning projects."
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE"}
+keywords = ["rocket-league", "rocketsim", "pettingzoo", "reinforcement-learning", "simulation"]
+authors = [
+  {name = "Lucas Emery"},
+  {name = "Matthew Allen"},
+  {name = "Zealan"},
+  {name = "Mtheal"},
+  {name = "Ben Burns"},
+]
+maintainers = [
+  {name = "Ben Burns", email = "benjamin.c.burns@gmail.com"}
+]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: Apache Software License",
+  "Natural Language :: English",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: MacOS :: MacOS X",
+  "Operating System :: Linux",
+  "Programming Language :: Python",
+  "Topic :: Games/Entertainment",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+  # If you're wondering why this is set to a fixed version, it's because the
+  # fucking pettingzoo maintainers make breaking changes to public API in
+  # goddamned PATCH releases, and 1.22.1 is the current version required by
+  # RLLib. Why can't we have nice things in this space?
+  "pettingzoo==1.22.1",
+  "numpy>=1.19"
+]
+
+[project.urls]
+repository = "https://github.com/benjamincburns/rocket-league-zoo-sim.git"
+upstream_repository = "https://github.com/AechPro/rocket-league-gym-sim.git"
+issue_tracker = "https://github.com/benjamincburns/rocket-league-zoo-sim/issues"
